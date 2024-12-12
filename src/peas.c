@@ -37,7 +37,7 @@ int RING_MAIN(void)
 
     ENV ENV_BASE = 
     { 
-        .RINGS = 0, .RING_AMOUNT =  GET_RINGS,
+        .RINGS = 0, .RING_AMOUNT = GET_RINGS,
         .ADJUST_RINGS = COLLECT_RINGS 
     };
 
