@@ -11,6 +11,17 @@ A. I won't be tainting my mind by writing Python
 
 B. By proxy of point A, I can write everything in God's ordained language (C)
 
+# File Contents:
+
+The areas of study included in this repoository are the general topics covered in each unit such as 
+
+- PEAS
+- Agents
+- Neural Networks
+- Searching
+
+these are the broader topics that are at play in this module, therefore each source file aims to be a reflection of such
+
 # Building:
 
 ```
