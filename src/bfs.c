@@ -83,6 +83,13 @@ void ADD_VERTEX(int ADJ[MAX_NUM][MAX_NUM], int *VERTEX, int MAX_VERTEX, int CONN
     int NUM_CONNECTIONS = 0;
     while (CONNECTIONS[NUM_CONNECTIONS] != 0)
     {
+
+        // DETERMINE WHICH VERTEX NEEDS TO BE ADDED TO
+        // THE CONCURRENT VERTEX 
+
+        // CREATE AND ESTABLISH A NEW VERTEX
+        // AND CONNECTION
+
         int CONNECT_TO = CONNECTIONS[NUM_CONNECTIONS];
         if (CONNECT_TO >= 0 && CONNECT_TO < *VERTEX)
         {
@@ -94,7 +101,6 @@ void ADD_VERTEX(int ADJ[MAX_NUM][MAX_NUM], int *VERTEX, int MAX_VERTEX, int CONN
 
     printf("Vertex %d added with %d connections.\n", NEW_VERTEX, NUM_CONNECTIONS);
 }
-
 
 int BFS_MAIN(void)
 {
@@ -110,11 +116,17 @@ int BFS_MAIN(void)
         {0, 0, 1, 1, 0}
     };
 
+    // DOUBLE NESTED LOOP TO CONCATENATE
+    // EACH SIDE OF THE MATRIX
+
     for (int i = 0; i < VERTEX_COUNT; i++)
         for (int j = 0; j < VERTEX_COUNT; j++)
             ADJACENT[i][j] = INITIAL_MATRIX[i][j];
 
     BFS_SEARCH(ADJACENT, VERTEX_COUNT, 0);
+
+    // ESTABLISH THE SIZE OF EACH CONNECTION ON ADJACENT ENDS
+    // ADD THE CORRESPONDING INFORMATION
 
     int NEW_CONNECTIONS[] = {3, 3};
     ADD_VERTEX(ADJACENT, &VERTEX_COUNT, MAX_NUM, NEW_CONNECTIONS);
