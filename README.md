@@ -17,6 +17,7 @@ The areas of study included in this repoository are the general topics covered i
 
 - PEAS
 - Agents
+- Problem Formulation
 - Neural Networks
 - Searching
 
