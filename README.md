@@ -28,7 +28,8 @@ these are the broader topics that are at play in this module, therefore each sou
 ```
 git clone this repo
 
-since there are individual source files that do separate things, plus for the sake of wanting to be able to test files out adjacent from one another, it's a simple case of doing the following
+since there are individual source files that do separate things, plus for the sake of wanting to be
+able to test files out adjacent from one another, it's a simple case of doing the following
 
 gcc --std=c99 src/filename.c
 ```
