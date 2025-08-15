@@ -11,13 +11,16 @@
 #include <math.h>
 #include <string.h>
 
-#define         MAX_IO           50
-#define         MAX_STRING       20
+#define         MAX_IO              50
+#define         MAX_STRING          20
+#define         LEARN_RATE          0.1f
+#define         EPOCHS              1000
 
 typedef struct NEURAL
 {
     float* WEIGHTS;
     float* NEURON_OUTPUT;
+    float* BIASES;
     unsigned TOTAL_NEURONS;
     unsigned TOTAL_WEIGHTS;
     unsigned INPUTS;
