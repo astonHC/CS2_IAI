@@ -28,7 +28,7 @@ these are the broader topics that are at play in this module, therefore each sou
 ```
 git clone this repo
 
-make clean
+since there are individual source files that do separate things, plus for the sake of wanting to be able to test files out adjacent from one another, it's a simple case of doing the following
 
-./cs2_iai
+gcc --std=c99 src/filename.c
 ```
