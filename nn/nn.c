@@ -104,12 +104,6 @@ NEURAL* NEURAL_INIT(unsigned INPUT_SIZE, unsigned OUTPUT_SIZE)
 
 void NEURAL_FORWARD(const char* INPUT_STRING)
 {
-    if (NEURAL_BASE == NULL)
-    {
-        fprintf(stderr, "Neural Network not initialized\n");
-        exit(EXIT_FAILURE);
-    }
-
     float* INPUT_VALUES = STRING_TO_FLOAT(INPUT_STRING, NEURAL_BASE->INPUTS);
 
     for (unsigned i = 0; i < NEURAL_BASE->OUTPUTS; i++)
@@ -134,12 +128,6 @@ void NEURAL_FORWARD(const char* INPUT_STRING)
 
 void NEURAL_BACKWARD(const char* INPUT_STRING, const float* TARGET, float LEARNING_RATE)
 {
-    if (NEURAL_BASE == NULL)
-    {
-        fprintf(stderr, "Neural Network not initialized\n");
-        exit(EXIT_FAILURE);
-    }
-
     float* INPUT_VALUES = STRING_TO_FLOAT(INPUT_STRING, NEURAL_BASE->INPUTS);
     
     // CALCULATE OUTPUT ERRORS AND UPDATE WEIGHTS
